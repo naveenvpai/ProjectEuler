@@ -1,4 +1,23 @@
+"""
+Problem 3:
 
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+
+Solution:
+
+Initially tried a brute force solution
+- had an isPrime method of O(n) for each factor --> very ineff.
+- led to memory error
+
+Decided to use Sieve of Eratosthenes (genPrimes):
+- lists all the the prime numbers under sqrt(n)
+- for those that are factors, divide n by them
+- once n is prime program has found the largest prime factor
+- NOTE: the result of genPrimes cannot be a generator b/c the method
+ greatestPrimeFactor needs to ref. the list to check if n is prime
+"""
 import math
 	
 def genPrimes(n):

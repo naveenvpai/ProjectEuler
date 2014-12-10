@@ -6,6 +6,7 @@
  Find the sum of all the multiples of 3 or 5 below 1000.
  
  Solution:
+ 
  Iterate through all multiples of 3 and 5, adding each to sum
  - NOTE: Multiples may overlap, so one variable needs to check against this
 */
