@@ -7,6 +7,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 Solution:
 
+MISTAKE:
 Initially tried a brute force solution
 - had an isPrime method of O(n) for each factor --> very ineff.
 - led to memory error
