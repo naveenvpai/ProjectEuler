@@ -14,8 +14,6 @@ Solution:
 Iteratively create fibonacci sequence, adding even elements to sum (n%2 == 0)
 - NOTE: An iterative process is more efficient than recursive in this situation because 
 a recursive fibonacci sequence overlaps (tree recursion --> ineff.)
-
-
 """
 
 def evenFib():
