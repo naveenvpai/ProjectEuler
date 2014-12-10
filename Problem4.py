@@ -1,19 +1,19 @@
 """
-    Problem 4:
-    
-    A palindromic number reads the same both ways. The largest palindrome made from the
-    product of two 2-digit numbers is 9009 = 91 × 99.
-    
-    Find the largest palindrome made from the product of two 3-digit numbers.
-    
-    Solution:
-    
-    Method checks palindrome by looping through and checking if the string is symmetrical
-    
-    Loop downwards from the maximum product of two n-digit numbers
-    - if you find a palindrome:
-    - check if it has two factors that are n-digit numbers
-        (MISTAKE: didn't check the second factor, i/j)
+Problem 4:
+
+A palindromic number reads the same both ways. The largest palindrome made from the
+product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+
+Solution:
+
+Method checks palindrome by looping through and checking if the string is symmetrical
+
+Loop downwards from the maximum product of two n-digit numbers
+- if you find a palindrome:
+- check if it has two factors that are n-digit numbers
+    (MISTAKE: didn't check the second factor, i/j)
 """
 
 def isPalindrome(n):
