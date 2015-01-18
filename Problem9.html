@@ -1,0 +1,72 @@
+<html>
+	<! -- Open in a browser to view -- />
+	<head>
+		<title>Problem 9</title>
+	</head>
+	<body>
+		<h1>Problem 9</h1>
+		<a STYLE="text-decoration: none" href="https://projecteuler.net/problem=9" target="new">View Here</a>
+		<p>A Pythagorean triplet is a set of three natural numbers, <var>a</var> &lt; <var>b</var> &lt; <var>c</var>, 
+		for which,</p>
+		<b><var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup></b>
+		<p>For example, 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25 = 5<sup>2</sup>.</p>
+		<p>There exists exactly one Pythagorean triplet for which <b> <var>a</var> + <var>b</var> + <var>c</var> = 1000.</b><br />
+		Find the product <b><var>abc</var></b>.</p>
+		
+		<h2>Key</h2>
+		
+		<p>
+		<a href="http://en.wikipedia.org/wiki/Pythagorean_triple#Generating_a_triple" STYLE="text-decoration: none" target="new">
+		Euclid's Formula</a> allows you to generate a Pythagorean triple using two positive integers m and n, 
+		where m > n.<br/><br/>
+		
+		Using Euclid's formula:<br/>
+		<ul>
+			<li>a = <var>m</var><sup>2</sup> - <var>n</var><sup>2</sup></li><br/>
+			<li>b = 2mn</li><br/>
+			<li>c = <var>m</var><sup>2</sup> + <var>n</var><sup>2</sup></li>
+		</ul>
+		By iterating through values of m and n, where each value is less than the sum S, <br/>and m  >  n,
+		one can find a pythagorean triple where a + b + c = S.
+		
+		<h2>Solution</h2>
+		
+		
+		
+		<! -- SCRIPT BELOW -- />
+		
+		
+		
+		<script type="text/javascript"/>
+			//See Euclid's Forumla
+			
+			var idealSum	= 1000;
+			
+			var m,n;
+			var a,b,c;
+			
+			var shouldBreak = false;
+			
+			for (n = 1; n < idealSum; n++) {
+				for (m = n+1; m < idealSum; m++) {
+					a = m*m - n*n;
+					if (a <= 0) continue;
+					b = 2*m*n;
+					if (b <= 0) continue;
+					c = m*m + n*n;
+					if (c <= 0) continue;
+					if (a+b+c == idealSum) {
+						shouldBreak = true;
+						break;
+					}
+				}
+				if (shouldBreak) {
+					break;
+				}
+			}
+			
+			document.writeln("a = "+a+"<br/>" + "b = "+b+"<br/>" + "c = "+c+"<br/><br/><b>abc = "+ a*b*c+"</b>");
+		</script>
+
+	</body>
+</html>
